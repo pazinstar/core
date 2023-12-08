@@ -53,7 +53,7 @@ from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 @require_http_methods(['POST'])
 def coinbase_webhook(request):
-    return HttpResponse('ok', status=200)
+    
     logger = logging.getLogger(__name__)
 
     request_data = request.body.decode('utf-8')
@@ -74,4 +74,4 @@ def coinbase_webhook(request):
         return HttpResponse(e, status=400)
 
     logger.info(f'Received event: id={event.id}, type={event.type}')
-    
+    return HttpResponse('ok', status=200)
