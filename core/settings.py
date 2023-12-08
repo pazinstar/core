@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 COINBASE_COMMERCE_API_KEY = '675c2608-ba94-4d63-ac1e-09911601d242'
-
+COINBASE_COMMERCE_WEBHOOK_SHARED_SECRET='c31e66d8-7274-4045-878c-540c5159abde'
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
